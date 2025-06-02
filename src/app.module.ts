@@ -23,6 +23,6 @@ import { WorkModule } from './work/work.module';
     AuthModule,
     UsersModule,
     WorkModule,
-  ],
+  ]
 })
 export class AppModule {}
