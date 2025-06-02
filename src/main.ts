@@ -12,10 +12,13 @@ async function bootstrap() {
     }),
   );
 
-  app.enableCors({
-    origin: '*', // Temmporary setting, adjust as needed
-  });
+  const origin = process.env.CORS_ORIGIN || '*';
+  const port = process.env.PORT || 3000;
 
-  await app.listen(3000);
+  app.enableCors({origin});
+
+
+
+  await app.listen(port);
 }
 bootstrap();
